@@ -1,0 +1,16 @@
+Package: easythemes
+Title: easy themes for ggplot
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Seokhoon", family = "Joo", email = "seokhoonj@gmail.com", 
+           role = c("aut", "cre"))
+Description: Easy ggplot themes for simple style changes such as font size and 
+             angle.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.5.0)
+Imports: 
+    ggplot2 (>= 3.3.3)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

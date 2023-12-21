@@ -22,7 +22,6 @@ theme_shiny(
   x.vjust = 0.5,
   y.hjust = NULL,
   y.vjust = NULL,
-  legend.key.size = NULL,
   legend.key.height = NULL,
   legend.key.width = NULL,
   legend.position = "right",
@@ -43,8 +42,7 @@ legend text face}
 
 \item{x.hjust, x.vjust, y.hjust, y.vjust}{horizontal, vertical adjustment}
 
-\item{legend.key.size, legend.key.height, legend.key.width}{size of legend keys (\code{unit}); key background height & width inherit from
-\code{legend.key.size} or can be specified separately}
+\item{legend.key.height, legend.key.width}{key background height & width}
 
 \item{legend.position}{the default position of legends ("none", "left",
 "right", "bottom", "top", "inside")}

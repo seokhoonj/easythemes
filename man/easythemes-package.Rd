@@ -6,7 +6,7 @@
 \alias{easythemes-package}
 \title{easythemes: easy themes for ggplot}
 \description{
-Easy themes for simple style changes such as font size and angle.
+Easy ggplot themes for simple style changes such as font size and angle.
 }
 \details{
 This package was created based on personal needs when writing reports.

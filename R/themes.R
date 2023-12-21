@@ -9,9 +9,7 @@
 #'   legend text face
 #' @param x.angle,y.angle x axis, y axis text angle
 #' @param x.hjust,x.vjust,y.hjust,y.vjust horizontal, vertical adjustment
-#' @param legend.key.size,legend.key.height,legend.key.width
-#'   size of legend keys (`unit`); key background height & width inherit from
-#'   `legend.key.size` or can be specified separately
+#' @param legend.key.height,legend.key.width key background height & width
 #' @param legend.position the default position of legends ("none", "left",
 #'   "right", "bottom", "top", "inside")
 #' @param panel.background background of plotting area, drawn underneath plot
@@ -23,9 +21,9 @@ theme_view <- function(family = "Comic Sans MS", x.size = NULL, y.size = NULL,
                        x.face = "plain", y.face = "plain", t.face = "plain",
                        s.face = "plain", l.face = "plain", x.angle = 0,
                        y.angle = 0, x.hjust = .5, x.vjust = .5, y.hjust = NULL,
-                       y.vjust = NULL, legend.key.size = NULL,
-                       legend.key.height = NULL, legend.key.width = NULL,
-                       legend.position = "right", panel.background = NULL) { # original default: panel.background = element_rect()
+                       y.vjust = NULL, legend.key.height = NULL,
+                       legend.key.width = NULL, legend.position = "right",
+                       panel.background = NULL) { # original default: panel.background = element_rect()
   list(
     theme(
       text  = element_text(family = family),
@@ -37,7 +35,6 @@ theme_view <- function(family = "Comic Sans MS", x.size = NULL, y.size = NULL,
                                   hjust = y.hjust, vjust = y.vjust),
       legend.title = element_text(size = l.size, face = l.face),
       legend.text  = element_text(size = l.size, face = l.face),
-      legend.key.size = legend.key.size,
       legend.key.height = legend.key.height,
       legend.key.width = legend.key.width,
       legend.position = legend.position,
@@ -59,9 +56,7 @@ theme_view <- function(family = "Comic Sans MS", x.size = NULL, y.size = NULL,
 #'   legend text face
 #' @param x.angle,y.angle x axis, y axis text angle
 #' @param x.hjust,x.vjust,y.hjust,y.vjust horizontal, vertical adjustment
-#' @param legend.key.size,legend.key.height,legend.key.width
-#'   size of legend keys (`unit`); key background height & width inherit from
-#'   `legend.key.size` or can be specified separately
+#' @param legend.key.height,legend.key.width key background height & width
 #' @param legend.position the default position of legends ("none", "left",
 #'   "right", "bottom", "top", "inside")
 #' @param panel.background background of plotting area, drawn underneath plot
@@ -74,9 +69,8 @@ theme_shiny <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
                         y.face = "plain", t.face = "plain", s.face = "plain",
                         l.face = "plain", x.angle = 0, y.angle = 0, x.hjust = .5,
                         x.vjust = .5, y.hjust = NULL, y.vjust = NULL,
-                        legend.key.size = NULL, legend.key.height = NULL,
-                        legend.key.width = NULL, legend.position = "right",
-                        panel.background = NULL,
+                        legend.key.height = NULL, legend.key.width = NULL,
+                        legend.position = "right", panel.background = NULL,
                         plot.background.fill = "transparent") { # original default: panel.background = element_rect() #ECF0F5
   list(
     theme(
@@ -89,7 +83,6 @@ theme_shiny <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
                                   hjust = y.hjust, vjust = y.vjust),
       legend.title = element_text(size = l.size, face = l.face),
       legend.text  = element_text(size = l.size, face = l.face),
-      legend.key.size = legend.key.size,
       legend.key.height = legend.key.height,
       legend.key.width  = legend.key.width,
       legend.position   = legend.position,
@@ -115,9 +108,7 @@ theme_shiny <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
 #'   legend text face
 #' @param x.angle,y.angle x axis, y axis text angle
 #' @param x.hjust,x.vjust,y.hjust,y.vjust horizontal, vertical adjustment
-#' @param legend.key.size,legend.key.height,legend.key.width
-#'   size of legend keys (`unit`); key background height & width inherit from
-#'   `legend.key.size` or can be specified separately
+#' @param legend.key.height,legend.key.width key background height & width
 #' @param legend.position the default position of legends ("none", "left",
 #'   "right", "bottom", "top", "inside")
 #' @param panel.background background of plotting area, drawn underneath plot
@@ -129,9 +120,8 @@ theme_save <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
                        y.face = "plain", t.face = "plain", s.face = "plain",
                        l.face = "plain", x.angle = 0, y.angle = 0, x.hjust = .5,
                        x.vjust = .5, y.hjust = NULL, y.vjust = NULL,
-                       legend.key.size = NULL, legend.key.height = NULL,
-                       legend.key.width = NULL, legend.position = "right",
-                       panel.background = NULL) { # original default: panel.background = element_rect()
+                       legend.key.height = NULL, legend.key.width = NULL,
+                       legend.position = "right", panel.background = NULL) { # original default: panel.background = element_rect()
   list(
     theme(
       text  = element_text(family = family),
@@ -143,7 +133,6 @@ theme_save <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
                                   hjust = y.hjust, vjust = y.vjust),
       legend.title = element_text(size = l.size, face = l.face),
       legend.text  = element_text(size = l.size, face = l.face),
-      legend.key.size = legend.key.size,
       legend.key.height = legend.key.height,
       legend.key.width = legend.key.width,
       legend.position = legend.position,

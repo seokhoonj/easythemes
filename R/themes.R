@@ -12,6 +12,9 @@
 #' @param legend.key.height,legend.key.width key background height & width
 #' @param legend.position the default position of legends ("none", "left",
 #'   "right", "bottom", "top", "inside")
+#' @param legend.justification anchor point for positioning legend inside plot
+#'   ("center" or two-element numeric vector) or the justification according to
+#'   the plot area when positioned outside the plot
 #' @param panel.background background of plotting area, drawn underneath plot
 #'   ([element_rect()]; inherits from `rect`)
 #'
@@ -23,6 +26,7 @@ theme_view <- function(family = "Comic Sans MS", x.size = NULL, y.size = NULL,
                        y.angle = 0, x.hjust = .5, x.vjust = .5, y.hjust = NULL,
                        y.vjust = NULL, legend.key.height = NULL,
                        legend.key.width = NULL, legend.position = "right",
+                       legend.justification = "center",
                        panel.background = NULL) { # original default: panel.background = element_rect()
   list(
     theme(
@@ -38,6 +42,7 @@ theme_view <- function(family = "Comic Sans MS", x.size = NULL, y.size = NULL,
       legend.key.height = legend.key.height,
       legend.key.width = legend.key.width,
       legend.position = legend.position,
+      legend.justification = legend.justification,
       panel.border = element_rect(colour = "black", fill = NA),
       panel.background = panel.background,
       strip.background = element_rect(colour = "black")
@@ -59,6 +64,9 @@ theme_view <- function(family = "Comic Sans MS", x.size = NULL, y.size = NULL,
 #' @param legend.key.height,legend.key.width key background height & width
 #' @param legend.position the default position of legends ("none", "left",
 #'   "right", "bottom", "top", "inside")
+#' @param legend.justification anchor point for positioning legend inside plot
+#'   ("center" or two-element numeric vector) or the justification according to
+#'   the plot area when positioned outside the plot
 #' @param panel.background background of plotting area, drawn underneath plot
 #'   ([element_rect()]; inherits from `rect`)
 #' @param plot.background.fill fill background of the entire plot
@@ -67,10 +75,12 @@ theme_view <- function(family = "Comic Sans MS", x.size = NULL, y.size = NULL,
 theme_shiny <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
                         t.size = 14, s.size = 14, l.size = 12, x.face = "plain",
                         y.face = "plain", t.face = "plain", s.face = "plain",
-                        l.face = "plain", x.angle = 0, y.angle = 0, x.hjust = .5,
-                        x.vjust = .5, y.hjust = NULL, y.vjust = NULL,
-                        legend.key.height = NULL, legend.key.width = NULL,
-                        legend.position = "right", panel.background = NULL,
+                        l.face = "plain", x.angle = 0, y.angle = 0,
+                        x.hjust = .5, x.vjust = .5, y.hjust = NULL,
+                        y.vjust = NULL, legend.key.height = NULL,
+                        legend.key.width = NULL, legend.position = "right",
+                        legend.justification = "center",
+                        panel.background = NULL,
                         plot.background.fill = "transparent") { # original default: panel.background = element_rect() #ECF0F5
   list(
     theme(
@@ -86,6 +96,7 @@ theme_shiny <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
       legend.key.height = legend.key.height,
       legend.key.width  = legend.key.width,
       legend.position   = legend.position,
+      legend.justification = legend.justification,
       panel.border = element_rect(colour = "black", fill = NA),
       panel.background  = panel.background,
       strip.background = element_rect(colour = "black"),
@@ -111,6 +122,9 @@ theme_shiny <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
 #' @param legend.key.height,legend.key.width key background height & width
 #' @param legend.position the default position of legends ("none", "left",
 #'   "right", "bottom", "top", "inside")
+#' @param legend.justification anchor point for positioning legend inside plot
+#'   ("center" or two-element numeric vector) or the justification according to
+#'   the plot area when positioned outside the plot
 #' @param panel.background background of plotting area, drawn underneath plot
 #'   ([element_rect()]; inherits from `rect`)
 #'
@@ -121,7 +135,9 @@ theme_save <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
                        l.face = "plain", x.angle = 0, y.angle = 0, x.hjust = .5,
                        x.vjust = .5, y.hjust = NULL, y.vjust = NULL,
                        legend.key.height = NULL, legend.key.width = NULL,
-                       legend.position = "right", panel.background = NULL) { # original default: panel.background = element_rect()
+                       legend.position = "right",
+                       legend.justification = "center",
+                       panel.background = NULL) { # original default: panel.background = element_rect()
   list(
     theme(
       text  = element_text(family = family),
@@ -136,6 +152,7 @@ theme_save <- function(family = "Comic Sans MS", x.size = 12, y.size = 12,
       legend.key.height = legend.key.height,
       legend.key.width = legend.key.width,
       legend.position = legend.position,
+      legend.justification = legend.justification,
       panel.border = element_rect(colour = "black", fill = NA),
       panel.background  = panel.background,
       strip.background = element_rect(colour = "black")
